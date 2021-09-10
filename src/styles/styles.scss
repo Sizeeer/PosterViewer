@@ -1,0 +1,125 @@
+body {
+  background-color: #eb596e;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.ant-card-meta-title {
+  white-space: pre-line;
+}
+
+.wrapper {
+  max-width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  padding-top: 120px;
+
+  &__text {
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+  }
+}
+
+.search {
+  margin-bottom: 40px;
+
+  .ant-input-group-addon {
+    background-color: transparent;
+  }
+
+  .ant-btn {
+    background-color: #ffe227;
+    border-color: #ffe227;
+    &:hover {
+      background-color: #ffea60;
+      border-color: #ffea60;
+      outline: none;
+    }
+    &:hover .ant-input:focus,
+    .ant-input:hover {
+      border-color: #ffe227;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+  }
+
+  .ant-input,
+  .ant-input:focus,
+  .ant-input:hover {
+    border: 1px solid #ffe227;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: none;
+  }
+}
+
+.films {
+  &__not {
+    font-size: 22px;
+    color: #121013;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    padding: 3px 5px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+}
+
+.film {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  &__title {
+    font-family: "Roboto", "sens-serid";
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  &__year {
+    font-family: "Roboto", "sens-serid";
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .header {
+    &__text {
+      font-size: 28px;
+    }
+  }
+  .film {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    &__text {
+      font-size: 26px;
+    }
+  }
+  .films {
+    padding-bottom: 20px;
+  }
+  .film {
+    margin-top: 10px;
+    .ant-card-meta-title {
+      margin-bottom: 3px !important;
+    }
+    .ant-card-body {
+      padding: 10px;
+    }
+  }
+}
